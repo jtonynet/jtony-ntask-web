@@ -1,0 +1,31 @@
+{
+  "name": "jtony-ntask-web",
+  "version": "1.0.0",
+  "description": "Versão web do gerenciador de tarefas",
+  "scripts": {
+    "start": "npm run build && npm run server",
+    "server": "http-server public -p 3001",
+    "build": "npm run browserify && npm run uglify",
+    "browserify": "browserify src -t babelify -o public/js/app.js",
+    "uglify": "uglify -s public/js/app.js -o public/js/app.min.js"
+  },
+  "author": "José Antonio",
+  "dependencies": {
+    "babelify": "6.3.0",
+    "browser-request": "0.3.3",
+    "browserify": "11.2.0",
+    "commander": "^2.9.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-css-url-replace": "^0.2.7",
+    "http-server": "0.8.4",
+    "tiny-emitter": "^1.0.0",
+    "uglify": "0.1.5",
+    "underscore": "^1.8.3",
+    "underscore.string": "^3.3.4"
+  }
+}
